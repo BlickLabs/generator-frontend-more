@@ -174,6 +174,10 @@ yo frontend-blick:section --name='Gallery'
 
 If your project was generated as an only-frontend one, this subgenerator won't be useful (nunjucks templates won't be compiled).
 
+## Blick's frontend workflow
+
+This README only describes the structure of the generated files, as well as the usage of the different gulptasks and the gulpconfig file. However, there are some extra stuff that you need to know about how frontend development is made in blick, such as styleguides and naming rules. This extra information is described in [the project's wiki](https://github.com/BlickLabs/generator-frontend-blick/wiki)
+
 ## Using NVM?
 
 If after installing the generator you are still unable to use it? You may want to see [this issue](https://github.com/yeoman/yo/issues/406) in the yeoman repository.
