@@ -8,7 +8,7 @@ module.exports = Generator.extend({
   prompting: function () {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the posh ' + chalk.green('generator-frontend-dev') + ' generator!'
+      'Welcome to the posh ' + chalk.green('generator-frontend-blick') + ' generator!'
     ));
 
     var prompts = [{

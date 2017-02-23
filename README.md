@@ -1,19 +1,19 @@
-# generator-frontend-dev [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-frontend-blick [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > Yeoman generator for simple frontend development using gulp, stylus, nunjucks and jshint. This generator is designed to be used in small/medium websites that don't require the complexity of any js framework or the usage of ES2015/2016. For bigger projects, you should look for more specific generators.
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-frontend-dev using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and generator-frontend-blick using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
-npm install -g generator-frontend-dev
+npm install -g https://github.com/BlickLabs/generator-frontend-blick
 ```
 
 Then generate your new project:
 
 ```bash
-yo frontend-dev
+yo frontend-blick
 ```
 
 And it's done! You can now run gulp and start to code!
