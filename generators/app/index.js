@@ -102,8 +102,8 @@ module.exports = Generator.extend({
       }
     );
     this.fs.copy(
-      this.templatePath('js/app.js'),
-      this.destinationPath('src/js/app.js')
+      this.templatePath('js/**/*'),
+      this.destinationPath('src/js/')
     );
     this.fs.copy(
       this.templatePath('fonts/.gitkeep'),
