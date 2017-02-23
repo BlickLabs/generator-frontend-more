@@ -1,4 +1,4 @@
-# generator-frontend-blick [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-frontend-blick
 > Yeoman generator for simple frontend development using gulp, stylus, nunjucks and jshint. This generator is designed to be used in small/medium websites that don't require the complexity of any js framework or the usage of ES2015/2016. For bigger projects, you should look for more specific generators.
 
 ## Installation
@@ -29,24 +29,6 @@ Yeoman will try to install all the node and bower dependencies that you need to 
 ```bash
 npm install -g gulp bower stylus jshint
 ```
-
-## What does this generator do?
-
-It basically uses stylus and nunjucks to help you to keep your html/css code modularized (of course, these files are compiled into html/css...). But there are some extra stuff you are able to do, such as...
-
-* Add 'active' classes in your navbar, or any other section-dependant css class, without repeating code
-* Code without worrying about vendor prefixes
-* Run a local server using an avaibalbe port
-* Automatically concatenate all your code
-* Automatically concatenate your bower dependencies
-* Improve the quality of your js code
-* Generate your own iconfont with custom svg images, without having to manually create the font files
-* Minify all your images, styles, scripts and bower dependencies
-* Use your favourite css framework. Because not everyone likes to use bootstrap.
-* Upload your compiled files to gh-pages
-* Set your custom domain to gh-pages
-
-Additionally, the stylus core of this generator comes with some useful mixins and classes (more information below).
 
 ## Directory structure
 
@@ -169,7 +151,7 @@ It works just like the css framework option.
 You can create a new section, with its respective nunjucks and stylus files, by running
 
 ```bash
-yo frontend-dev:section
+yo frontend-blick:section
 ```
 
 > Section name (default: Contact)
@@ -185,7 +167,7 @@ Lets you choose if you want to create the stylus empty file inside styl/sections
 You can use the --name flag to change the default section name
 
 ```bash
-yo frontend-dev:section --name='Gallery'
+yo frontend-blick:section --name='Gallery'
 ```
 
 **IMPORTANT!**
@@ -195,24 +177,3 @@ If your project was generated as an only-frontend one, this subgenerator won't b
 ## Using NVM?
 
 If after installing the generator you are still unable to use it? You may want to see [this issue](https://github.com/yeoman/yo/issues/406) in the yeoman repository.
-
-## Getting To Know Yeoman
-
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
-
-## License
-
-MIT © [Alan Sanchez]()
-
-
-[npm-image]: https://badge.fury.io/js/generator-frontend-dev.svg
-[npm-url]: https://npmjs.org/package/generator-frontend-dev
-[travis-image]: https://travis-ci.org/AlanSanchezP/generator-frontend-dev.svg?branch=master
-[travis-url]: https://travis-ci.org/AlanSanchezP/generator-frontend-dev
-[daviddm-image]: https://david-dm.org/AlanSanchezP/generator-frontend-dev.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/AlanSanchezP/generator-frontend-dev
-[coveralls-image]: https://coveralls.io/repos/AlanSanchezP/generator-frontend-dev/badge.svg
-[coveralls-url]: https://coveralls.io/r/AlanSanchezP/generator-frontend-dev
