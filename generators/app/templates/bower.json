@@ -26,7 +26,13 @@
   "resolutions": {
     "jquery": "^3.1.0"
   },
-  "overrides": {<% if (useFontAwesome) { %>
+  "overrides": {
+    "jquery-validation": {
+      "main": [
+        "./dist/jquery.validate.js",
+        "./src/localization/messages_es.js"
+      ]
+    }<% if (useFontAwesome) { %>
     "font-awesome": {
       "main": [
         "./css/font-awesome.css",
