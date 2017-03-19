@@ -16,6 +16,7 @@
   "dependencies": {
     "jquery": "^3.1.0",
     "jquery-validation": "jquery-validate#^1.15.1",
+    "loaders.css": "^0.1.2",
     "foundation-sites": "^6.3.0"
   },
   "resolutions": {
