@@ -17,9 +17,9 @@
     "jquery": "^3.1.0",
     "jquery-validation": "jquery-validate#^1.15.1",
     "loaders.css": "^0.1.2",<% if (cssFramework == 'Bootstrap') { %>
-    "bootstrap": "^3.3.7" <% } else if (cssFramework == 'Foundation') { %>
-    "foundation-sites": "^6.3.0" <% } else if (cssFramework == 'Pure.css') { %>
-    "pure": "^0.6.2" <% } else { %>
+    "bootstrap": "^3.3.7"<% } else if (cssFramework == 'Foundation') { %>
+    "foundation-sites": "^6.3.0"<% } else if (cssFramework == 'Pure.css') { %>
+    "pure": "^0.6.2"<% } else { %>
     "normalize-css": "^5.0.0"<% } if (useFontAwesome) { %>,
     "font-awesome": "fontawesome#^4.7.0"<% } %>
   },
@@ -32,13 +32,13 @@
         "./dist/jquery.validate.js",
         "./src/localization/messages_es.js"
       ]
-    }<% if (useFontAwesome) { %>
+    }<% if (useFontAwesome) { %>,
     "font-awesome": {
       "main": [
         "./css/font-awesome.css",
         "./fonts/*"
       ]
-    }<% if (cssFramework != 'Other') { %>,<% } %><% } %><% if (cssFramework == 'Bootstrap') { %>
+    }<% } %><% if (cssFramework != 'Other') { %>,<% } %><% if (cssFramework == 'Bootstrap') { %>
     "bootstrap": {
       "main": [
         "./dist/css/bootstrap.css",
