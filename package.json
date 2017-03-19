@@ -1,7 +1,7 @@
 {
-  "name": "generator-frontend-dev",
+  "name": "generator-frontend-blick",
   "version": "0.1.0",
-  "description": "Yeoman generator for frontend development.",
+  "description": "Yeoman generator for blick frontend development.",
   "homepage": "",
   "author": {
     "name": "Alan Sanchez",
@@ -56,7 +56,7 @@
       "mocha": true
     }
   },
-  "repository": "AlanSanchezP/generator-frontend-dev",
+  "repository": "BlickLabs/generator-frontend-blick",
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"

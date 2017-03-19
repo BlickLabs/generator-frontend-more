@@ -8,7 +8,7 @@ module.exports = Generator.extend({
   prompting: function () {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the posh ' + chalk.green('generator-frontend-dev') + ' generator!'
+      'Welcome to the posh ' + chalk.green('generator-frontend-blick') + ' generator!'
     ));
 
     var prompts = [{
@@ -102,8 +102,8 @@ module.exports = Generator.extend({
       }
     );
     this.fs.copy(
-      this.templatePath('js/app.js'),
-      this.destinationPath('src/js/app.js')
+      this.templatePath('js/**/*'),
+      this.destinationPath('src/js/')
     );
     this.fs.copy(
       this.templatePath('fonts/.gitkeep'),

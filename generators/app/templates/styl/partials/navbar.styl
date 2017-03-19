@@ -1,0 +1,86 @@
+nav
+  background white
+  display flex
+  align-items center
+  height 78px // Change
+  left 0
+  position fixed
+  top 0
+  width 100%
+  z-index 12
+
+  .menu-trigger,
+  .mobile-logo-container
+    display none
+
+  .menu-trigger
+    color white // Change
+
+  .desktop-logo-container
+    padding-top remify(5) // Change
+
+    img
+      width remify(150) // Change
+
+  .menu-container
+    flex-grow 1
+    font-size remify(19) // Change
+    text-align right
+    height 100%
+
+  .menu
+    height 100%
+
+  .menu-link
+    display inline-block
+    vertical-align middle
+    line-height 74px // Change
+
+    &:hover, &.active
+      color white // Change
+
+@media screen and (max-width: 876px) // Change
+  nav
+    justify-content space-between
+    height 56px // Change
+    padding 0 18px // CHange
+
+    .mobile-logo-container
+      display block
+      center-block()
+      width 70% // Change
+
+      img
+        width 100%
+
+    .menu-trigger
+      display block
+      float right
+      margin 18px 0 // Change
+      font-size 18px // Change
+
+    .menu-container
+      background white // Change
+      height 100vh
+      margin-right 0
+      overflow-y auto
+      position fixed
+      right -280px
+      top 0
+      transition right 0.2s
+      width 280px
+      padding-top 25px // Change
+
+      &.show-menu
+        right 0
+
+      .menu
+        margin-top 30px // Change
+        text-align left
+        height auto
+
+      .menu-link
+        color white
+        display block
+        height auto
+        line-height 1
