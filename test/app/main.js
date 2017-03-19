@@ -32,6 +32,8 @@ describe('generator-frontend-dev:app', function () {
       'gulpconfig.js',
       'gulpfile.js',
       'src/js/app.js',
+      'src/js/menu.js',
+      'src/js/validations.js',
       'src/fonts/.gitkeep',
       'src/img/.gitkeep',
       'src/svg/.gitkeep',
