@@ -13,7 +13,7 @@ html
 body
   font-size inherit
 
-  .noscroll
+  &.noscroll
     overflow hidden
 
     &::after
@@ -29,7 +29,6 @@ a
   margin 0
   overflow hidden
   padding 0
-
 
 // LOADERS //
 .custom-loader
@@ -73,10 +72,12 @@ label.error
   &.success
     color $successColor
 
-  &.succes, &.error
+  &.success, &.error
     margin-top 1em
 
 input, textarea, button, select
+  font-family inherit
+
   &, &:hover, &:active &:focus
     box-shadow none
     outline none
