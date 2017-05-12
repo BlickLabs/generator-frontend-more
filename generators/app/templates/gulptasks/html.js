@@ -11,7 +11,7 @@ gulp.task('build:html', function () {
       var sectionName = file.relative.split('.njk')[0];
       return {
         section: sectionName
-      }
+      };
     }))
     .pipe(nunjucksRender({
       path: config.paths.getSrc('templates_dir'),
