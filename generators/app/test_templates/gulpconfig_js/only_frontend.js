@@ -35,7 +35,7 @@ module.exports = {
     getSrc: function (files) {
       return paths.src[files];
     },
-    getCompiled: function (files, production) {
+    getCompiled: function (production, files) {
       var root = production ? 'dist' : 'build';
       if (files === 'root') {
         return root;
