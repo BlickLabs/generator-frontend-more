@@ -51,7 +51,6 @@ module.exports = {
     }
   },
   etc: {
-    domain: '',
     projectName: 'Test project',
     formattedName: package
   }
