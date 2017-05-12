@@ -1,8 +1,8 @@
 var gulp = require('gulp'),
-  config = require('../gulpconfig'),
+  paths = require('../gulpconfig').paths,
   ghPages = require('gulp-gh-pages');
 
 gulp.task('deploy', function() {
-  return gulp.src(config.paths.dist.all)
+  return gulp.src(paths.getCompiled(true, 'all')
     .pipe(ghPages());
 });
