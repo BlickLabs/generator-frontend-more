@@ -19,11 +19,11 @@ gulp.task('server:run', function() {
 
 gulp.task('server:reload', function () {
   var src = [
-    config.paths.getSrc('html'),
-    config.paths.getSrc('js'),
-    config.paths.getSrc('css'),
-    config.paths.getSrc('fonts'),
-    config.paths.getSrc('img')
+    config.paths.getCompiled(production, 'html'),
+    config.paths.getCompiled(production, 'js'),
+    config.paths.getCompiled(production, 'css'),
+    config.paths.getCompiled(production, 'fonts'),
+    config.paths.getCompiled(production, 'img')
   ];
   gulp.src(src)
     .pipe(connect.reload());
