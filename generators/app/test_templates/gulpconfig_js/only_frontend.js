@@ -2,10 +2,8 @@ var src = './src',
   dist = './dist',
   build = './build',
   bower = './bower_components',
-  package = 'test_project';
-
-module.exports = {
-  paths: {
+  package = 'test_project',
+  paths = {
     src: {
       styles_all: src + '/styl/**/*.styl',
       styles_main: src + '/styl/main.styl',
@@ -22,32 +20,38 @@ module.exports = {
       templates_sections: src + '/templates/sections/*.njk',
       root: src
     },
-    build: {
-      css: build + '/css/',
-      js: build + '/js/',
-      img: build + '/img/',
-      fonts: build + '/fonts/',
-      html: build + '/*.html',
-      root: build
+    compiled: {
+      css: '/css/',
+      js: '/js/',
+      img: '/img/',
+      fonts: '/fonts/',
+      html: '/*.html',
+      all: '/**/*'
+    }
+  };
+
+module.exports = {
+  paths: {
+    getSrc: function (files) {
+      return paths.src[files];
     },
-    dist: {
-      css: dist + '/css/',
-      js: dist + '/js/',
-      img: dist + '/img/',
-      fonts: dist + '/fonts/',
-      html: dist + '/*.html',
-      all: dist + '/**/*',
-      root: dist
-    },
-    bower: function (package) {
+    getCompiled: function (files, production) {
+      var root = production ? 'dist' : 'build';
+      if (files === 'root') {
+        return root;
+      } else {
+        return root + paths.compiled[files];
+      }
+    }
+    getBower: function (package) {
       return bower + '/' + package;
     }
   },
   outputs: {
-    libs: function (extension) {
+    getLibs: function (extension) {
       return package + '.libs.' + extension;
     },
-    files: function (extension) {
+    getFiles: function (extension) {
       return package + '.' + extension;
     }
   },
