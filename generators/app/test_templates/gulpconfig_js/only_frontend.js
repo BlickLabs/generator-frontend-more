@@ -42,7 +42,7 @@ module.exports = {
       } else {
         return root + paths.compiled[files];
       }
-    }
+    },
     getBower: function (package) {
       return bower + '/' + package;
     }
