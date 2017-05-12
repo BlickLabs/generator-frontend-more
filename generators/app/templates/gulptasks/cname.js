@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 gulp.task('create:cname', function () {
   if (domain) {
     try {
-      fs.writeFileSync(config.paths.dist.root + '/CNAME', config.etc.domain);
+      fs.writeFileSync(config.paths.getCompiled(true, 'root') + '/CNAME', config.etc.domain);
     } catch (e) {
       console.error(e);
     }
