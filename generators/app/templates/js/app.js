@@ -8,7 +8,7 @@
     },
     submitHandler: function (form) {
       var $form = $(form).serialize(),
-        isNewsletter = typeof $(form).attr('data-newsletter-form') !== undefined,
+        isNewsletter = typeof $(form).attr('data-newsletter-form') !== typeof undefined,
         fields = $(form).find('select, input, textarea, button').not('[disabled]'),
         formMessage = $(form).find('.form-message'),
         successMessage = $('<i class="fa fa-check-circle"></i><span>Mensaje enviado exitosamente</span>'),
