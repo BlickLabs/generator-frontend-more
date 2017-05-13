@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-  config = require('./gulpconfig'),
+  paths = require('./gulpconfig').paths,
   requireDir = require('require-dir'),
   argv = require('yargs').argv,
   production = argv.production,
@@ -23,11 +23,11 @@ if (!production) {
 gulp.task('build', buildTasks);
 
 gulp.task('watch', function () {
-  gulp.watch(config.paths.bower(''), ['build:bower']);
-  gulp.watch([config.paths.src.styles_all, config.paths.src.svg_files], ['build:styles']);
-  gulp.watch(config.paths.src.scripts_all, ['build:scripts']);
-  gulp.watch(config.paths.src.fonts, ['copy:fonts']);
-  gulp.watch(config.paths.src.img, ['copy:images']);
+  gulp.watch(paths.getBower(''), ['build:bower']);
+  gulp.watch([paths.getSrc('styles_all'), paths.getSrc('svg_files')], ['build:styles']);
+  gulp.watch(paths.getSrc('scripts_all'), ['build:scripts']);
+  gulp.watch(paths.getSrc('fonts'), ['copy:fonts']);
+  gulp.watch(paths.getSrc('img'), ['copy:images']);
 });
 
 
