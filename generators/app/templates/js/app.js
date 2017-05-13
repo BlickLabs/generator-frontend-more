@@ -8,12 +8,14 @@
     },
     submitHandler: function (form) {
       var $form = $(form).serialize(),
+        isNewsletter = typeof $(form).attr('data-newsletter-form') !== undefined,
         fields = $(form).find('select, input, textarea, button').not('[disabled]'),
         formMessage = $(form).find('.form-message'),
         successMessage = $('<i class="fa fa-check-circle"></i><span>Mensaje enviado exitosamente</span>'),
+        newsletterMessage = $('<i class="fa fa-check-circle"></i><span>Suscripción realizada con éxito</span>'),
         errorMessage = $('<i class="fa fa-times-circle"></i><span>Ocurrió un error</span>'),
         setMessage = function (success) {
-          var message = success ? successMessage : errorMessage;
+          var message = success ? (isNewsletter ? newsletterMessage : successMessage) : errorMessage;
           fields.removeAttr('disabled');
           formMessage.removeClass(success ? 'error' : 'success');
           formMessage.addClass(success ? 'success' : 'error');
@@ -31,7 +33,8 @@
         data: $form
       })
         .done(function (data) {
-          setMessage(parseInt(data) === 1);
+          var condition = isNewsletter ? data.status === 'subscribed' : parseInt(data) === 1;
+          setMessage(condition);
           form.reset();
         })
         .fail(function () {
