@@ -46,8 +46,8 @@
       if (!$(form).find('.button-wrapper .loader').length) {
         $(form).find('.button-wrapper').addClass('disabled');
       }
-      
-      if (!isNotAJAX) {
+
+      if (isNotAJAX) {
         form.submit();
       } else {
         $.ajax({
