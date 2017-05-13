@@ -9,6 +9,7 @@
     submitHandler: function (form) {
       var $form = $(form).serialize(),
         isNewsletter = typeof $(form).attr('data-newsletter-form') !== typeof undefined,
+        isNotAJAX = typeof $(form).attr('data-disable-ajax') !== typeof undefined,
         fields = $(form).find('select, input, textarea, button').not('[disabled]'),
         formMessage = $(form).find('.form-message'),
         successMessage = $('<i class="fa fa-check-circle"></i><span>Mensaje enviado exitosamente</span>'),
@@ -27,23 +28,27 @@
       if (!$(form).find('.button-wrapper .loader').length) {
         $(form).find('.button-wrapper').addClass('disabled');
       }
-      $.ajax({
-        url: $(form).attr('action'),
-        method: 'POST',
-        data: $form
-      })
-        .done(function (data) {
-          var condition = isNewsletter ? data.status === 'subscribed' : parseInt(data) === 1;
-          setMessage(condition);
-          form.reset();
+      if (!isNotAJAX) {
+        form.submit();
+      } else {
+        $.ajax({
+          url: $(form).attr('action'),
+          method: 'POST',
+          data: $form
         })
-        .fail(function () {
-          setMessage(false);
-        })
-        .always(function () {
-          fields.removeAttr('disabled');
-          $(form).find('.button-wrapper').removeClass('disabled');
-        });
+          .done(function (data) {
+            var condition = isNewsletter ? data.status === 'subscribed' : parseInt(data) === 1;
+            setMessage(condition);
+            form.reset();
+          })
+          .fail(function () {
+            setMessage(false);
+          })
+          .always(function () {
+            fields.removeAttr('disabled');
+            $(form).find('.button-wrapper').removeClass('disabled');
+          });
+      }
     }
   });
 })();
