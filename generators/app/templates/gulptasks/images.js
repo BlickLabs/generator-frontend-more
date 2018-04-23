@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
   paths = require('../gulpconfig').paths,
-  imagemin = require('gulp-imagemin'),
+  imagemin = require('gulp-image'),
   gulpIf = require('gulp-if'),
   argv = require('yargs').argv,
   production = argv.production;
