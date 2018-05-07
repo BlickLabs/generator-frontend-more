@@ -1,16 +1,63 @@
-<nav class="site-navbar">
-  <div class="site-navbar__desktop-logo-container">
-    <a href="index.html"><img src="#" alt="Logo"></a> {# Change #}
+<nav class="navbar">
+  <div>
+    <a href="index.html">
+      <img class="site-navbar-logo" src="img/logos/wicore-white-logo.png" alt="Navbar logo">
+    </a>
   </div>
-  <div class="site-navbar__menu-trigger">
-    <span class="fa fa-bars"></span>
-  </div>
-  <div class="site-navbar__menu-container">
-    <div class="site-navbar__mobile-logo-container">
-      <a href="index.html"><img src="#" alt="Logo"></a> {# Change #}
+  <div class="navbar-option-container">
+    <div class="navbar-option-content">
+      <a href="index.html">
+        <span class="navbar-option {% if section == 'index' %} active-section {% endif %}">Inicio</span>
+      </a>
     </div>
-    <div class="site-navbar__menu">
-      <a href="index.html" class="site-navbar__menu-link {% if section == 'index' %}active{% endif %}">Home</a>
+    <div class="navbar-option-content">
+      <a href="nosotros.html">
+        <span class="navbar-option {% if section == 'nosotros' %} active-section {% endif %}">Nosotros</span>
+      </a>
+    </div>
+    <div class="navbar-option-content">
+      <a href="contacto.html">
+        <span class="navbar-option {% if section == 'contacto' %} active-section {% endif %}">Contacto</span>
+      </a>
+    </div>
+  </div>
+
+  <div data-attribute="" class="hamburger-visibility"  id="hamburgerMenu">
+    <div class="navbar-hamburguer" data-attribute="">
+      <div class="hamburger-line-icon-container" data-attribute="">
+        <div class="hamburger-line-icon" data-attribute=""></div>
+        <div class="hamburger-line-icon" data-attribute=""></div>
+        <div class="hamburger-line-icon" data-attribute=""></div>
+      </div>
+    </div>
+  </div>
+  <div class="hamburger-menu-container" id="menuContainer" data-attribute="">
+    <div class="hamburger-menu-header" data-attribute="">
+      <div class="" data-attribute="">
+        <a href="index.html" data-attribute="">
+          <img class="hamburger-logo" src="img/logos/wicore-white-logo.png" data-attribute="" alt="Hamburger menu logo">
+        </a>
+      </div>
+      <div id="hideHamburger">
+        <img class="hamburger-close" src="img/icons/close-menu.png" alt="Close hamburger menu">
+      </div>
+    </div>
+    <div class="hamburger-menu-body nunitosans-regular" data-attribute="">
+      <div class="hamburger-text-container">
+        <a href="index.html" data-attribute="">
+          <span class="hamburger-text {% if section == 'index' %} hamburger-active {% endif %}">Inicio</span>
+        </a>
+      </div>
+      <div class="hamburger-text-container">
+        <a href="nosotros.html" data-attribute="">
+          <span class="hamburger-text {% if section == 'nosotros' %} hamburger-active {% endif %}">Nosotros</span>
+        </a>
+      </div>
+      <div class="hamburger-text-container">
+        <a href="contacto.html" data-attribute="">
+          <span class="hamburger-text {% if section == 'contacto' %} hamburger-active {% endif %}">Contacto</span>
+        </a>
+      </div>
     </div>
   </div>
 </nav>
