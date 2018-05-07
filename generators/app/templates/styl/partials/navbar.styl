@@ -1,95 +1,139 @@
-.site-navbar
-  background white
-  display flex
+.navbar
   align-items center
-  height 78px // Change
+  background-color gray
+  display flex
+  height 100px
+  justify-content space-between
   left 0
+  padding 0 40px
   position fixed
   top 0
   width 100%
   z-index 12
 
-  & + main
-    padding-top 78px // Change
+  &-logo
+    height 23px
+    width 108px
 
-.site-navbar__menu-trigger,
-.site-navbar__mobile-logo-container
-  display none
+  &-scroll
+    align-items center
+    background-color green
+    box-shadow 0 6px 8px 0 rgba(0,0,0,0.2)
+    height 100px
 
-.site-navbar__menu-trigger
-  color white // Change
+  &-option
+    color black
 
-.site-navbar__desktop-logo-container
-  img
-    width remify(150) // Change
-
-.site-navbar__menu-container
-  flex-grow 1
-  text-align right
-  height 100%
-
-.site-navbar__menu
-  height 100%
-  display flex
-  align-items center
-  justify-content flex-end
-
-.site-navbar__menu-link
-  color black // Change
-  font-size remify(19) // Change
-
-  &:hover, &.active
-    color white // Change
-
-@media screen and (max-width: 876px) // Change
-  .site-navbar
-    justify-content space-between
-    height 56px // Change
-    padding 0 18px // Change
-
-  .site-navbar__desktop-logo-container
-    img
-      height remify(20) // Change
-      width auto
-
-  .site-navbar__mobile-logo-container
-    display block
-    center-block()
-    width 70% // Change
-
-    img
+    &:hover:before,
+    &.active-section:before
+      background-color white
+      bottom -8px
+      content ""
+      height 3px
+      position absolute
       width 100%
 
-  .site-navbar__menu-trigger
-    display block
-    float right
-    font-size 18px // Change
+    &:hover
+      color white
 
-  .site-navbar__menu-container
-    background white // Change
-    height 100vh
-    margin-right 0
-    overflow-y auto
-    position fixed
-    right -280px
-    top 0
-    transition right 0.2s
-    width 280px
-    padding-top 25px // Change
+    &-container
+      display flex
+      flex-direction row
 
-  .site-navbar__menu-container--show-menu
-    right 0
+    &-content
+      margin-left 20px
+      position relative
 
-  .site-navbar__menu
-    margin-bottom 30px // Change
-    margin-top 30px // Change
-    text-align left
-    height auto
-    flex-wrap wrap
+.hamburger
+  &-visibility
+    position absolute
 
-  .site-navbar__menu-link
-    display block
-    height auto
-    display block
-    text-align left
-    flex-basis 100%
+  &-menu
+    &-container
+      display none
+
+.active-section
+  color white
+
+@media screen and (max-width: 876px)
+  .navbar
+    justify-content space-between
+    height 70px
+    padding 0 18px
+
+    &-option
+      &-container
+        display none
+
+  .hamburger
+    background-color transparent
+    display flex
+    height 33px
+    justify-content center
+    width 33px
+
+    &-visibility
+      cursor pointer
+      position initial
+
+    &-logo
+      height 20px
+      width 94px
+
+    &-close
+      height 16px
+      width 16px
+
+    &-menu
+      &-container
+        background-color gray
+        display inline
+        bottom 0
+        left 0
+        overflow scroll
+        padding-bottom 50px
+        position fixed
+        top 0
+        -webkit-transition width 0.5s
+        transition width 0.5s
+        width 0%
+        z-index 13
+
+      &-header
+        align-items center
+        display flex
+        flex-direction row
+        justify-content space-between
+        padding 22px 36px 50px 36px
+
+      &-body
+        margin-left 36px
+
+    &-text
+      color white
+      padding 10px 0
+
+      &-container
+        margin 35px 0
+
+    &-active,
+    &-text:hover
+      font-weight bold
+      text-decoration underline
+
+    &-line
+      &-icon
+        background-color #fff
+        height 2px
+        width 20px
+
+        &-container
+          display flex
+          flex-direction column
+          justify-content center
+
+        &:nth-child(2)
+          margin 4px 0
+
+        &:last-child
+          width 12px
