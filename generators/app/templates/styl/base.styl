@@ -3,6 +3,8 @@
 
 html
   font-size unit($baseFontSize, 'px')
+  min-height 100%
+  position relative
 
   @media screen and (max-width: 768px)
     font-size 14.5px
@@ -12,6 +14,7 @@ html
 
 body
   font-size inherit
+  margin 70px 0 200px 0
 
   &.noscroll
     overflow hidden
