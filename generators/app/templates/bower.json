@@ -16,12 +16,9 @@
   "dependencies": {
     "jquery": "^3.1.0",
     "jquery-validation": "jquery-validate#^1.15.1",
-    "loaders.css": "^0.1.2",<% if (cssFramework == 'Bootstrap') { %>
-    "bootstrap": "^3.3.7"<% } else if (cssFramework == 'Foundation') { %>
-    "foundation-sites": "^6.3.0"<% } else if (cssFramework == 'Pure.css') { %>
-    "pure": "^0.6.2"<% } else { %>
-    "normalize-css": "^5.0.0"<% } if (useFontAwesome) { %>,
-    "font-awesome": "fontawesome#^4.7.0"<% } %>
+    "normalize-css": "^5.0.0",
+    "owl.carousel": "2.3.4",
+    "alertifyjs": "1.0.11"
   },
   "resolutions": {
     "jquery": "^3.1.0"
@@ -32,41 +29,6 @@
         "./dist/jquery.validate.js",
         "./src/localization/messages_es.js"
       ]
-    }<% if (useFontAwesome) { %>,
-    "font-awesome": {
-      "main": [
-        "./css/font-awesome.css",
-        "./fonts/*"
-      ]
-    }<% } %><% if (cssFramework != 'Other') { %>,<% } %><% if (cssFramework == 'Bootstrap') { %>
-    "bootstrap": {
-      "main": [
-        "./dist/css/bootstrap.css",
-        "./dist/js/bootstrap.js",
-        "./dist/fonts/*"
-      ]
-    }<% } else if (cssFramework == 'Foundation') { %>
-    "foundation-sites": {
-      "main": [
-        "./dist/css/foundation.css",
-        "./dist/js/foundation.js"
-      ]
-    }<% } else if (cssFramework == 'Pure.css') { %>
-    "pure": {
-      "main": [
-        "./src/base/base.css",
-        "./src/buttons/css/buttons-core.css",
-        "./src/buttons/css/buttons.css",
-        "./src/forms/css/forms-r.css",
-        "./src/forms/css/forms.css",
-        "./src/grids/css/grids-core.css",
-        "./src/menus/css/menus-core.css",
-        "./src/menus/css/menus-dropdown.css",
-        "./src/menus/css/menus-horizontal.css",
-        "./src/menus/css/menus-scrollable.css",
-        "./src/menus/css/menus-skin.css",
-        "./src/tables/css/tables.css"
-      ]
-    }<% } %>
+    }
   }
 }
