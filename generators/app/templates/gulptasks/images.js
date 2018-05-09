@@ -1,15 +1,17 @@
 var gulp = require('gulp'),
-  paths = require('../gulpconfig').paths,
-  image = require('gulp-image'),
+  config = require('../gulpconfig'),
+  imagens = require('gulp-image'),
   gulpIf = require('gulp-if'),
   argv = require('yargs').argv,
   production = argv.production;
 
 gulp.task('copy:images', function () {
-  gulp.src(paths.getSrc('img'))
-    .pipe(gulpIf(production, image()))
-    .pipe(gulp.dest(paths.getCompiled(production, 'img')));
+  // var baseDir = production ? config.paths.dist : config.paths.build;
+//// TODO: Modify source to get source from gulpconfig
+  gulp.src(['./src/img/**/*.{gif,png,jpg,svg}'])
+    .pipe(gulpIf(production, imagens()))
+    .pipe(gulp.dest(baseDir.img));
 
-  gulp.src(paths.getSrc('favicon'))
-    .pipe(gulp.dest(paths.getCompiled(production, 'root')));
+  // gulp.src(config.paths.src.favicon)
+  //   .pipe(gulp.dest(baseDir.root));
 });
