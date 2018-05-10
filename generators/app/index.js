@@ -16,33 +16,6 @@ module.exports = Generator.extend({
       name: 'name',
       message: 'Project name',
       default: this.appname
-    },
-    {
-      type: 'confirm',
-      name: 'onlyFrontend',
-      message: 'Is this an only-frontend project?',
-      default: true
-    },
-    {
-      type: 'list',
-      name: 'cssFramework',
-      message: 'What css framework do you want to use?',
-      choices: [
-        'Bootstrap',
-        'Foundation',
-        'Pure.css',
-        {
-          name: 'Other (you will need to install it manually)',
-          value: 'Other'
-        }
-      ],
-      default: 'Bootstrap'
-    },
-    {
-      type: 'confirm',
-      name: 'useFontAwesome',
-      message: 'Do you want to use FontAwesome?',
-      default: true
     }];
 
     return this.prompt(prompts).then(function (props) {
