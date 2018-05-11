@@ -13,6 +13,11 @@ gulp.task('build:html', function () {
         section: sectionName
       };
     }))
+
+    .pipe(data(function() {
+      return require('../src/json/data.json')
+    }))
+
     .pipe(nunjucksRender({
       path: config.paths.getSrc('templates_dir'),
       ext: '.html',
