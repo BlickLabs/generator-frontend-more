@@ -85,6 +85,10 @@ module.exports = Generator.extend({
       this.templatePath('jshintrc.txt'),
       this.destinationPath('.jshintrc')
     );
+    this.fs.copy(
+      this.templatePath('json/*'),
+      this.destinationPath('src/json/')
+    );
     this.fs.copyTpl(
       this.templatePath('gulpconfig.js'),
       this.destinationPath('gulpconfig.js'),
