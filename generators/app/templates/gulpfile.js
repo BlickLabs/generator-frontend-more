@@ -10,7 +10,6 @@ var gulp = require('gulp'),
     'copy:fonts',
     'copy:images'<% if (onlyFrontend) { %>,
     'build:html',<% } %>
-    'copy:nginx'
   ],
   defaultTasks = [
     'build'
