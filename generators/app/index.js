@@ -126,14 +126,6 @@ module.exports = Generator.extend({
       this.destinationPath('src/styl/')
     );
     this.fs.copy(
-      this.templatePath('gulptasks/copynginx.js'),
-      this.destinationPath('gulptasks/copynginx.js')
-    );
-    this.fs.copy(
-      this.templatePath('nginx/project-*'),
-      this.destinationPath('src/nginx/project-*')
-    );
-    this.fs.copy(
       this.templatePath('gulptasks/bower.js'),
       this.destinationPath('gulptasks/bower.js')
     );
