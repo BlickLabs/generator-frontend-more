@@ -31,6 +31,7 @@ gulp.task('watch', function () {
   gulp.watch(paths.getBower(''), ['build:bower'<% if (onlyFrontend) { %>, 'server:reload'<% } %>]);
   gulp.watch([paths.getSrc('styles_all'), paths.getSrc('svg_files')], ['build:styles'<% if (onlyFrontend) { %>, 'server:reload'<% } %>]);
   gulp.watch(paths.getSrc('scripts_all'), ['build:scripts'<% if (onlyFrontend) { %>, 'server:reload'<% } %>]);
+  gulp.watch(paths.getSrc('jsons_all'), ['build:scripts'<% if (onlyFrontend) { %>, 'server:reload'<% } %>]);
   gulp.watch(paths.getSrc('fonts'), ['copy:fonts'<% if (onlyFrontend) { %>, 'server:reload'<% } %>]);
   gulp.watch(paths.getSrc('img'), ['copy:images'<% if (onlyFrontend) { %>, 'server:reload'<% } %>]);<% if (onlyFrontend) { %>
   gulp.watch(paths.getSrc('templates_all'), ['build:html', 'server:reload']);<% } %>
