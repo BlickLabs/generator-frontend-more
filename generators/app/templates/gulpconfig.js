@@ -11,6 +11,7 @@ var src = './src',
       svg_dir: src + '/svg/',
       scripts_all: src + '/js/**/*.js',
       scripts_main: src + '/js/app.js',
+      jsons_all: src + '/json/**/*.json',
       img: src + '/img/**/*.*',
       favicon: src + '/favicon.ico',
       fonts: src + '/fonts/**/*.*',<% if (onlyFrontend) { %>
@@ -24,6 +25,7 @@ var src = './src',
     compiled: {
       css: '/css/',
       js: '/js/',
+      json: '/json/',
       img: '/img/',
       fonts: '/fonts/',<% if (onlyFrontend) { %>
       html: '/*.html',<% } %>
